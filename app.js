@@ -10,5 +10,5 @@ app.get('/', function(req, res) {
 });
 
 app.listen( 4200, function(){
-    console.log('Server is running');
+    console.log('Server is running at 4200');
 });
