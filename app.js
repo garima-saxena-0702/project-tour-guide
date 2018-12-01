@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+const port = process.env.PORT || 4200;
+app.set('port', port);
+
 app.use(express.static(path.join(__dirname, '/dist/project')));
 
 app.get('/', function(req, res) {
@@ -9,6 +12,6 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'dist/project/index.html'));
 });
 
-app.listen( 4200, function(){
+app.listen( port , function(){
     console.log('Server is running at 4200');
 });
