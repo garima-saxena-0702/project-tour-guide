@@ -12,4 +12,12 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  validate() {
+    const userName = (<HTMLInputElement>document.getElementById('userName')).value;
+    console.log(userName);
+    const password = (<HTMLInputElement>document.getElementById('password')).value;
+    console.log(password);
+    
+  }
+
 }
